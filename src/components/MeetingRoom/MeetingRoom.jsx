@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { config, useClient, useMicrophoneAndCameraTracks, channelName } from "../../config.js";
 import MeetingController from "../MeetingControler/MeetingControllers";
 import MeetingVideo from "../MeetingVideo/MeetingVideo";
+import callApi from "../../api/apiStore/callApi";
 // import Video from "./Video";
 // import Controls from "./Controls";
 const MeetingRoom = (props) => {
@@ -12,8 +13,19 @@ const MeetingRoom = (props) => {
     const [start, setStart] = useState(false);
     const client = useClient()
     const { ready, tracks } = useMicrophoneAndCameraTracks()
+    const getAppInfo = async () => {
+      try {
+        const response = await callApi.getAppInfo()
+        console.log(`Response: ${response}`)
+      } catch (e) {
+        alert(`Get app info error: ${e}`)
+      }
+    }
+    const getToken = () => {
 
+    }
     useEffect(() => {
+        
         let init = async (name) => {
             client.on("user-published", async (user, mediaType) => {
                 await client.subscribe(user, mediaType);
@@ -56,6 +68,7 @@ const MeetingRoom = (props) => {
 
         if (ready && tracks) {
             try {
+              //  getAppInfo()
               init(channelName);
             } catch (error) {
               console.log(error);
