@@ -1,1 +1,30 @@
-@use "../../assets/scss/" as *
+@use "../../assets/scss/" as *;
+
+
+.meeting-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: $white-color;
+    &__time {
+
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 300px;
+    }
+
+    &__advance {
+        font-size: 1.6rem;
+        svg{
+            margin-left: 10px;
+        }
+        svg:hover {
+            background-color: $red-color;
+        }
+    }
+}

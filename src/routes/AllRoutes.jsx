@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { AgoraMeet } from "../pages"
+import { AgoraMeet, Schedules } from "../pages"
 
 const AllRoutes = () => {
     return (
@@ -8,9 +8,13 @@ const AllRoutes = () => {
             <Route
                 exact
                 path='/meeting/:channelName'
-                element={<AgoraMeet/>}
+                element={<AgoraMeet inCall={true}/>}
             />
-
+            <Route
+                exact
+                path='/schedule'
+                element={<Schedules/>}
+            />
         </Routes>
     )
 }

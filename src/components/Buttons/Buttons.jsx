@@ -1,23 +1,22 @@
 import React from "react";
-
-
+import "./button.scss"
 export default function CallButton(props) {
-    const {title, onClick, bgColor, color, icon} = props
+    const {onClick, bgColor, color, icon, active} = props
     return (
-        <div className="button">
-            <i class="fa-solid fa-phone"></i>
-        </div>
+        <>
+            {
+                active?(
+                    <div className="call-button active" onClick={onClick}>
+                        {icon}
+                    </div>
+                ): (
+                    <div className="call-button" onClick={onClick}>
+                        {icon}
+                    </div>
+                )
+            }
+        </>
+        
     )
 }
 
-const MeetingButton = (props) => {
-    const {title, onClick, bgColor, color, icon} = props
-        return (
-            // <i class="fa-solid fa-phone"></i>
-            // <i class="fa-solid fa-camera"></i>
-            // <i class="fa-solid fa-screencast"></i>
-            // <i class="fa-solid fa-messages"></i>
-            <>
-            </>
-        )
-}
