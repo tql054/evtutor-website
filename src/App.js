@@ -1,23 +1,13 @@
-import { useState } from "react";
-import { Button } from "@material-ui/core";
-import VideoCall from "./VideoCall";
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import "./App.scss"
+import AllRoutes from "./routes/AllRoutes";
 function App() {
-  const [inCall, setInCall] = useState(false);
-
   return (
-    <div className="App" style={{ height: "100%" }}>
-      {inCall ? (
-        <VideoCall setInCall={setInCall} />
-      ) : (
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => setInCall(true)}
-        >
-          Join Call
-        </Button>
-      )}
+    <div className="App">
+        <Router>
+            <AllRoutes/>
+        </Router>
     </div>
   );
 }

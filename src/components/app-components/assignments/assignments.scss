@@ -1,0 +1,57 @@
+@use "../../../assets/scss/" as *;
+
+.assignments {
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 20px;
+        font-size: 1rem;
+        font-weight: 700;
+        &__content {
+            color: $text-color
+        }
+
+        &__link {
+            display: block;
+            color: $main-color;
+        }
+    }
+
+    &__list {
+        &__item {
+            padding-bottom: 10px;
+            border-bottom: solid 1.5px #ccc;
+            margin-right: 10px;
+            margin-top: 10px;
+            .inner {
+                background-color: #ffd6c6; //have to set color corresponding to item
+                border-radius: 10px;
+                padding: 10px;
+                color: $text-color;
+                font-size: 1rem;
+                box-shadow: 0px 4px 5px #ccc;
+                .time {
+                    margin: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+
+                    h3 {
+                        margin-left: 5px;
+                        font-size: .8rem;
+                    }
+                }
+
+                .lesson {
+                    background-color: #e9f2f4;
+                    max-width: 100px;
+                    padding: 10px;
+                    font-size: .8rem;
+                    border-radius: 10px;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use "../../../assets/scss/" as *;
+
+.schedule-container {
+    border-top: solid 1px #ccc;
+    background-color: #f2f2f2;
+    max-width: calc(100% - 60px) ;
+    box-sizing: border-box;
+    .row, .col, .schedule {
+        height: 100%;
+    }
+    .schedule {
+        background-color: $white-color;
+        padding: 15px 25px;
+        &__dashboard {
+            background-color: $main-color;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0;
+            border-radius: 20px;
+            box-shadow: 8px 8px 5px #ccc;
+            &__text {
+                color: $white-color;
+                .title {
+                    font-size: 2rem;
+                }
+
+                .content {
+                    font-size: 1rem;
+                }
+
+            }
+
+            &__image {
+                img {
+                    width: 60%;
+                    height: 60%;
+                    float: right;
+                }
+            }
+        }
+
+        &__time-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 25px 0;
+            
+            &__title {
+                font-size: 1.4rem;
+                color: $text-color;
+                font-weight: 700;
+            }
+
+            &__controllers {
+                display: flex;
+                align-items: center;
+                color: #ccc;
+                .button {
+                    border: solid 1px #ccc;
+                    border-radius: 5px;
+                    padding: 5px 30px;
+                }
+
+                .button.right {
+                    color: $text-color;
+                    margin-left: 10px;
+                }
+                
+            }
+        }
+    }
+}
