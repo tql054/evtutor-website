@@ -1,0 +1,203 @@
+@use "../../../assets/scss/" as *;
+
+.calendar {
+    height: 360px;
+    box-shadow: 0px 0px 15px #ccc;
+    border-radius: 20px;
+
+    &__date {
+        height: 20%;
+        border-bottom: solid 1px #ccc;
+    }
+
+    &__grid {
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 30px;
+            .time {
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: .7rem;
+                font-weight: 700;
+            }
+
+            .lesson {
+                background-color: rgb(243, 217, 243);
+                padding: 20px 40px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 1rem;
+                box-shadow: 2px 2px 5px #ccc;
+                transition: all .5s ease;
+            }
+
+            .lesson:hover {
+                background-color: rgb(236, 165, 236);
+            }
+        }
+    }
+
+
+    h1,h3{
+        margin-bottom: 20px;
+    }
+
+    /* TASKS CONTAINER */
+    // .task__container{
+    //     display: flex;
+    //     margin-bottom: 3rem;
+    //     /* background-color: brown; */
+    //     padding: 10px;
+    // }
+
+    // .task__container .task__name{
+    //     padding: 10px;
+    //     margin: 0 10px;
+    //     border-radius: 5px;
+    //     cursor: pointer;
+    // }
+
+    // .task__name.selected{
+    //     box-shadow:0px 0px 0px 2px black inset;
+    // }
+
+    // #deselect{
+    //     background-color: #1d3557;
+    //     color: white;
+    // }
+
+
+    /* SCHEDULE DESIGN */
+    .schedule__container{
+        height: 100%;
+        background: linear-gradient(#ebf4f5, #b5c6e0);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .days__container{
+        display: flex;
+    }
+
+    .corner{
+        // width: 50px;
+        height: 70px;
+        margin: 2px;
+    }
+
+    .day{
+        width: 200px;
+        border-bottom: solid 2px white;
+        color: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+        font-weight: 700;
+    }
+
+    .part__day{
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .time{
+        // width: 50px;
+        height: 70px;
+        color: #103783;
+        // background-color: #103783;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3.8px;
+        font-size: .8rem;
+    }
+
+    .task{
+        background-color: rgb(243, 217, 243);
+        border-radius: 5px;
+        height: 70px;
+        width: 100px;
+        max-height: 70px;
+        max-width: 100px;
+        margin: 2px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        font-weight: 700;
+        color: $text-color;
+
+        &:hover {
+            background-color: rgb(236, 165, 236);
+        }
+    }
+
+    
+
+    /* Reset Button */
+    .deleteBtn{
+        padding: 10px 25px;
+        margin-top: 20px;
+        border: none;
+        background-color: white;
+        border: solid 2px black;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    .deleteBtn:hover{
+        background-color: #eee;
+    }
+
+    /* Pop up */
+    .pop-up__container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pop-up{
+        width: 300px;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #00b4d8;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .btn__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn__answer{
+        margin: 0 20px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

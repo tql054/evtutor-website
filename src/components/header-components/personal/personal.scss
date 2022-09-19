@@ -1,0 +1,39 @@
+@use "../../../assets/scss/" as *;
+
+.personal-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bell {
+        margin: 0 20px;
+        color: #ccc;
+    }
+    .header-personal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &__image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background-image: url("https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/tin-tuc/148210/Originals/Nft-la-gi-1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__name {
+            font-size: 1rem;
+            font-weight: 800;
+            color: rgb(249, 136, 44);
+            margin: 0 10px;
+        }
+
+        &__down-icon {
+            font-size: 1rem;
+            color: #ccc;
+            margin-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use "../../../assets/scss/" as *;
+
+.header-dashboard {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $text-color;
+    &__logo {
+        background-color: $main-color;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .image {
+            width: 60%;
+            height: 60%;
+            background-color: $white-color;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+
+    &__name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 30px;
+    }
+}

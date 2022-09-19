@@ -1,0 +1,1 @@
+export {default as ImageSchedule} from "./image-schedule.png"

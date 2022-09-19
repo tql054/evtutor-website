@@ -1,0 +1,21 @@
+@use "../../assets/scss/" as *;
+
+.call-button {
+    min-width: 60px;
+    min-height: 60px;
+    background-color: $main-color-lighter;
+    border-radius: 50px;
+    color: $white-color;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    &:hover {
+        background-color: $red-color;
+    }
+}
+
+.active-button {
+    background-color: $red-color;
+}
