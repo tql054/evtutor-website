@@ -7,6 +7,7 @@
             height: 600px;
             background-color: $black-color;
             border-radius: 20px;
+            padding: 0;
         }
 
         .video-local {
@@ -18,12 +19,17 @@
                 height: 70%;
             }
 
-            &__controllers {
+            &__remote {
                 width: 100%;
                 height: 26%;
                 background-color: $main-color-lighter;
                 border-radius: 10px;
-
+                .remote-list {
+                    // margin: 5px;
+                    margin-left: 10px;
+                    padding: 10px 0 10px 5px;
+                    border-radius: 5px;
+                }
             }
         }   
 
@@ -32,6 +38,15 @@
                 div {
                     background-color: $black-color;
                     border-radius: 20px;
+                }
+            }
+        }
+
+        .remote-list {
+            div {
+                div {
+                    background-color: $black-color;
+                    border-radius: 10px;
                 }
             }
         }

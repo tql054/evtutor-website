@@ -5,10 +5,10 @@ import MeetingController from "../MeetingControler/MeetingControllers";
 import MeetingVideo from "../MeetingVideo/MeetingVideo";
 import AgoraRTC, { createClient, createMicrophoneAndCameraTracks } from "agora-rtc-react";
 const MeetingRoom = (props) => {
-    const {setInCall, config1, channelName} = props
+    const {setInCall, config, channelName} = props
     const [users, setUsers] = useState([]);
     const [start, setStart] = useState(false);
-    const useClient = createClient(config1)
+    const useClient = createClient(config)
     const client = useClient()
     const useMicrophoneAndCameraTracks = createMicrophoneAndCameraTracks();
     const { ready, tracks } = useMicrophoneAndCameraTracks()
@@ -43,7 +43,7 @@ const MeetingRoom = (props) => {
         });
   
         try {
-          await client.join(config1.appId, name, config1.token, null);
+          await client.join(config.appId, name, config.token, null);
         } catch (error) {
           console.log("error");
         }

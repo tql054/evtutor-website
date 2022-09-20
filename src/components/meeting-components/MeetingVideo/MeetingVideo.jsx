@@ -36,8 +36,24 @@ const MeetingVideo = (props) => {
                     }   
                     </div>
 
-                    <div className="video-local__controllers">
-                        <div className="container">
+                    <div className="video-local__remote">
+                        <div className="container grid" style={{height:"100%"}}>
+                            <div className="row" style={{height:"100%"}}>
+                                {
+                                    users.map((user, index) => {
+                                        if(index!=0)
+                                            return (
+                                                index!= 0 && user && user.videoTrack &&
+                                                <div key={index} className="col l-4 m-4 remote-list">
+                                                    <AgoraVideoPlayer
+                                                        videoTrack={user.videoTrack}
+                                                        style={{ height: "100%", width: "100%" }}
+                                                    />
+                                                </div>
+                                            )
+                                    })
+                                }
+                            </div>
                             
                         </div>
                     </div>
@@ -48,4 +64,4 @@ const MeetingVideo = (props) => {
     )
 }
 
-export default MeetingVideo
+export default MeetingVideo 

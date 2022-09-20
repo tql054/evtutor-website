@@ -29,7 +29,7 @@ const AgoraMeet = (inCall) => {
         <div style={{ height: "100%",  backgroundColor: "#01122e"}}>
           { 
             config?(
-              <MeetingRoom setInCall={inCall} config1={config} channelName={channelName}/>
+              <MeetingRoom setInCall={inCall} config={config} channelName={channelName}/>
 
             ):(
               <h1 style={{color:"#fff", height:"730px", textAlign:"center", lineHeight:"730px"}}>Loading...</h1>

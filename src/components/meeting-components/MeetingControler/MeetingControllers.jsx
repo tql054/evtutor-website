@@ -65,8 +65,8 @@ const MeetingController = (props) => {
             </ul>
 
             <div className="meeting-controllers__advance">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-bolt"></i>
+                <i className="fa-solid fa-user"></i>
+                <i className="fa-solid fa-bolt"></i>
             </div>
         </div>
     )
